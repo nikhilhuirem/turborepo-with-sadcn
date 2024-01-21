@@ -1,0 +1,32 @@
+{
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"start": "turbo start",
+		"start:local": "turbo start:local",
+		"lint": "turbo lint",
+		"clean": "turbo clean",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"docs": "yarn workspace docs",
+		"web": "yarn workspace web",
+		"eslint": "yarn workspace eslint-config-custom",
+		"tailwind": "yarn workspace tailwind-config",
+		"tsconfig": "yarn workspace tsconfig",
+		"ui": "yarn workspace ui",
+		"ui:add": "yarn workspace ui ui:add"
+	},
+	"devDependencies": {
+		"eslint": "^8.53.0",
+		"prettier": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.7",
+		"tsconfig": "*",
+		"turbo": "^1.10.16",
+		"eslint-config-custom": "*"
+	},
+	"packageManager": "yarn@1.22.19"
+}
